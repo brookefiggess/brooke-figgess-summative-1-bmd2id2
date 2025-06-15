@@ -1,3 +1,5 @@
+/*LANDING PAGE*/
+
 * {
     margin: 0;
     padding: 0;
@@ -35,4 +37,157 @@
 
 .login-btn:hover {
     opacity: 0.8;
+}
+
+
+/*HOMEPAGE*/
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  background-color: #1A1A1A;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* Header */
+.home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.home-logo {
+  height: 60px;
+}
+
+.home-menu-icon {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.home-menu-icon .bar {
+  width: 24px;
+  height: 3px;
+  background-color: #EEFF00;
+}
+
+/* Main Content Wrapper */
+.home-main-wrapper {
+  padding: 0 2rem;
+  margin-bottom: 6rem; /* make room for fixed bottom nav */
+}
+
+/* Date Section */
+.home-date-section {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.home-date {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: underline wavy #EEFF00;
+  text-underline-offset: 10px;
+}
+
+.home-divider {
+  height: 4px;
+  background-repeat: repeat-x;
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* Stat Block */
+.home-stat-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2A2A2A;
+  padding: 1.5rem;
+  border: 1px solid #333;
+  margin-bottom: 4rem;
+}
+
+.home-stat-label {
+  font-size: 1.5rem;
+}
+
+.home-stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #EEFF00;
+}
+
+/* Text Card */
+.home-text-card {
+  background-color: #161616;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.home-link {
+  color: #EEFF00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Highlight Card */
+.home-highlight-card {
+  background-color: #161616;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.highlight {
+  color: #EEFF00;
+  font-weight: bold;
+}
+
+/* Edit Button */
+.home-edit-button-container {
+  text-align: center;
+}
+
+.home-edit-button {
+  background-color: #2A2A2A;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Bottom Nav */
+.home-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1A1A1A;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+}
+
+.home-nav-icon {
+  font-size: 1.5rem;
+  color: #EEFF00;
+  text-decoration: none;
 }
