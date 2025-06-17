@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UNCENT | Journal Form</title>
+  <link rel="stylesheet" href="https://use.typekit.net/yvi0kcr.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="home-container">
+    <!-- Header -->
+    <div class="home-header">
+      <img src="assets/back-arrow.png" alt="Back" class="home-back-icon" onclick="history.back()">
+      <img src="assets/uncent-logo-stacked.png" alt="UNCENT Logo" class="home-logo">
+      <div class="home-menu-icon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+
+    <!-- Page Heading -->
+    <div class="home-main-wrapper">
+        <h1 class="page-header-journal">Journal</h1>
+      </div>
+      
+      <!-- Slide Carousel -->
+      <div class="journal-carousel" id="journalSlides">
+        <!-- Slide 1 -->
+        <section class="journal-slide active">
+            <div class="journal-text-wrapper">
+              <p class="journal-slide-greeting">So Chris,</p>
+              <p class="journal-slide-question">How are you feeling about money today?</p>
+            </div>
+          
+            <div class="journal-slider-container">
+              <input type="range" min="0" max="100" value="50" class="journal-slider" />
+              <div class="journal-slider-labels">
+                <span>Stressed</span>
+                <span>Neutral</span>
+                <span>Confident</span>
+              </div>
+            </div>
+          
+            <button class="journal-next-button" onclick="nextSlide()">
+              Next <img src="assets/forward-arrow.png" alt="Arrow" class="journal-arrow" />
+            </button>
+          </section>
+
+      <!-- Future Slides will go here -->
+    </div>
+  </main>
+
+  <!-- Footer Nav -->
+  <footer class="home-nav-footer">
+    <button class="nav-button">
+      <img src="assets/home-icon.png" alt="Home" class="nav-icon" />
+    </button>
+    <button class="nav-button">
+      <img src="assets/chatbot-icon.png" alt="Chatbot" class="nav-icon" />
+    </button>
+    <button class="nav-button">
+      <img src="assets/journal-icon.png" alt="Journal" class="nav-icon" />
+    </button>
+    <button class="nav-button">
+      <img src="assets/achievements-icon.png" alt="Achievements" class="nav-icon" />
+    </button>
+  </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

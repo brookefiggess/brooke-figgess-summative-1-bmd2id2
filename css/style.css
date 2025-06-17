@@ -282,5 +282,85 @@ body {
   line-height: 1.4;
 }
 
+/* Journal Form Page */
+.journal-carousel {
+  padding: 0 2rem;
+}
+
+.journal-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.journal-text-wrapper {
+  width: 100%;
+  text-align: left;
+}
+
+.journal-slide.active {
+  display: flex;
+}
+
+.journal-slide-greeting {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.journal-slide-question {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.journal-slider-container {
+  width: 100%;
+}
+
+.journal-slider {
+  width: 100%;
+  appearance: none;
+  height: 6px;
+  background: #ccc;
+  outline: none;
+  border-radius: 3px;
+  background: linear-gradient(to right, #EEFF00 50%, #444 50%);
+}
+
+.journal-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 2px solid #1a1a1a;
+}
+
+.journal-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.journal-next-button {
+  margin-top: 4rem;
+  background: none;
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+.journal-next-button img {
+  width: 20px;
+}
 
 
