@@ -3,7 +3,7 @@
     "short_name": "UC",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#222222",
+    "background_color": "#E8F00",
     "icons": [
         {
             "src" : "assets/icon-icon.png",
