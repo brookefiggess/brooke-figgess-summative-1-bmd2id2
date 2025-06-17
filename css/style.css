@@ -65,6 +65,16 @@ body {
   position: relative;
 }
 
+.home-back-icon {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  width: 30px;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
 .home-logo {
   height: 60px;
 }
@@ -103,7 +113,7 @@ body {
   text-underline-offset: 10px;
 }
 
-.home-greeting {
+.page-header{
   font-size: 32px;
   font-weight: 600;
   padding-top: 40px;
@@ -213,4 +223,53 @@ body {
   height: 32px;  /* Adjust to desired size */
   object-fit: contain;
 }
+
+/* Journal Home */
+
+.page-header-journal{
+  font-size: 32px;
+  font-weight: 600;
+  padding-top: 40px;
+  padding-bottom: 32px;
+}
+
+.journal-entry-prompt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #EEFF00;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2rem 0 1rem;
+  font-size: 1.3rem;
+  color: white;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  background-color: transparent;
+}
+
+.journal-arrow {
+  width: 24px;
+  height: auto;
+}
+
+.journal-note-block {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: 1.2rem;
+  color: white;
+}
+
+.journal-note-label {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.journal-note {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
 
