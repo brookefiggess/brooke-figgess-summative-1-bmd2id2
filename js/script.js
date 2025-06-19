@@ -18,13 +18,21 @@ function goToHome() {
       slider.style.background = `linear-gradient(to right, #EEFF00 0%, #EEFF00 ${value}%, #444 ${value}%, #444 100%)`;
     }
   
-    // Initial render
     updateSliderBackground(slider.value);
   
-    // Update on input
     slider.addEventListener("input", function () {
       updateSliderBackground(this.value);
     });
   });
   
+  document.addEventListener("DOMContentLoaded", () => {
+    const spendOptions = document.querySelectorAll(".spend-option");
+  
+    spendOptions.forEach(button => {
+      button.addEventListener("click", () => {
+        spendOptions.forEach(btn => btn.classList.remove("selected"));
+        button.classList.add("selected");
+      });
+    });
+  });
   

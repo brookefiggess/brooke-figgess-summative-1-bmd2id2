@@ -248,6 +248,7 @@ body {
   font-family: "neue-haas-grotesk-display", sans-serif;
   background-color: transparent;
   margin-bottom: 6rem;
+  text-decoration: none;
 }
 
 .journal-arrow {
@@ -359,8 +360,84 @@ body {
   font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
+.journal-next-button {
+  margin: 3rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .journal-next-button img {
   width: 20px;
 }
 
+/* Journal Form - Carousel slide two */
 
+.journal-spend-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 2.5rem 0 3.5rem;
+}
+
+.spend-option {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: color 0.3s ease;
+}
+
+.spend-option .star {
+  font-size: 1.25rem;
+  color: #EEFF00;
+  transition: transform 0.3s ease;
+}
+
+.spend-option.selected {
+  color: #EEFF00;
+}
+
+.spend-option.selected .star {
+  content: '★';
+  transform: scale(1.1);
+}
+
+/* Journal Form - Carousel slide three */
+
+.journal-textarea-container {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.journal-textarea {
+  border: 2px solid #EEFF00;  /* your brand yellow */
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: 1rem;
+  resize: none;
+  outline: none; 
+}
+
+.journal-textarea:focus {
+  border-color: #EEFF00; 
+  outline: none;
+}
+
+.journal-textarea::placeholder {
+  color: #aaa;
+}
+
+.journal-slide-form {
+  display: contents;
+}

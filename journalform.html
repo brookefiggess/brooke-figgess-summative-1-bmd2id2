@@ -22,52 +22,85 @@
 
     <!-- Page Heading -->
     <div class="home-main-wrapper">
-        <h1 class="page-header-journal">Journal</h1>
-      </div>
-      
-      <!-- Slide Carousel -->
-      <div class="journal-carousel" id="journalSlides">
-        <!-- Slide 1 -->
-        <section class="journal-slide active">
-            <div class="journal-text-wrapper">
-              <p class="journal-slide-greeting">So Chris,</p>
-              <p class="journal-slide-question">How are you feeling about money today?</p>
-            </div>
-          
-            <div class="journal-slider-container">
-              <input type="range" min="0" max="100" value="50" class="journal-slider" />
-              <div class="journal-slider-labels">
-                <span>Stressed</span>
-                <span>Neutral</span>
-                <span>Confident</span>
-              </div>
-            </div>
-          
-            <button class="journal-next-button" onclick="nextSlide()">
-              Next <img src="assets/forward-arrow.png" alt="Arrow" class="journal-arrow" />
-            </button>
-          </section>
+      <h1 class="page-header-journal">Journal</h1>
+    </div>
 
-      <!-- Future Slides will go here -->
+    <!-- Slide Carousel -->
+    <div class="journal-carousel" id="journalSlides">
+
+      <!-- Slide 1 -->
+      <section class="journal-slide active">
+        <div class="journal-text-wrapper">
+          <p class="journal-slide-greeting">So Chris,</p>
+          <p class="journal-slide-question">How are you feeling about money today?</p>
+        </div>
+
+        <div class="journal-slider-container">
+          <input type="range" min="0" max="100" value="50" class="journal-slider" />
+          <div class="journal-slider-labels">
+            <span>Stressed</span>
+            <span>Neutral</span>
+            <span>Confident</span>
+          </div>
+        </div>
+
+        <button class="journal-next-button" onclick="nextSlide()">
+          Next <img src="assets/forward-arrow.png" alt="Arrow" class="journal-arrow" />
+        </button>
+      </section>
+
+      <!-- Slide 2 -->
+      <section class="journal-slide">
+        <div class="home-main-wrapper">
+          <p class="journal-slide-question">Did you spend money today?</p>
+
+          <div class="journal-spend-options">
+            <button class="spend-option">Yes <span class="star">☆</span></button>
+            <button class="spend-option">No <span class="star">☆</span></button>
+            <button class="spend-option">Still thinking about it <span class="star">☆</span></button>
+          </div>
+
+          <button class="journal-next-button" onclick="nextSlide()">
+            Next <img src="assets/forward-arrow.png" alt="Arrow" class="journal-arrow" />
+          </button>
+        </div>
+      </section>
+
+      <!-- Slide 3 -->
+      <form action="homepage.html" method="get" class="journal-slide-form">
+        <section class="journal-slide">
+          <div class="home-main-wrapper">
+            <p class="journal-slide-question journal-slide-question-3">
+              What did you plan on or end up buying?
+            </p>
+            <textarea class="journal-textarea" placeholder="Type here..."></textarea>
+          </div>
+
+          <button type="submit" class="journal-next-button">
+            Submit <img src="assets/forward-arrow.png" alt="Arrow" class="journal-arrow" />
+          </button>
+        </section>
+      </form>
     </div>
   </main>
 
   <!-- Footer Nav -->
   <footer class="home-nav-footer">
+    <a href="homepage.html" class="nav-button">
+        <img src="assets/home-icon.png" alt="Home" class="nav-icon">
+      </a>
     <button class="nav-button">
-      <img src="assets/home-icon.png" alt="Home" class="nav-icon" />
+      <img src="assets/chatbot-icon.png" alt="Chat-bot" class="nav-icon">
     </button>
+    <a href="journalhome.html" class="nav-button">
+      <img src="assets/journal-icon.png" alt="Journal" class="nav-icon">
+    </a>
     <button class="nav-button">
-      <img src="assets/chatbot-icon.png" alt="Chatbot" class="nav-icon" />
-    </button>
-    <button class="nav-button">
-      <img src="assets/journal-icon.png" alt="Journal" class="nav-icon" />
-    </button>
-    <button class="nav-button">
-      <img src="assets/achievements-icon.png" alt="Achievements" class="nav-icon" />
+      <img src="assets/achievements-icon.png" alt="Achievements" class="nav-icon">
     </button>
   </footer>
 
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
+
