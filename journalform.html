@@ -6,6 +6,12 @@
   <title>UNCENT | Journal Form</title>
   <link rel="stylesheet" href="https://use.typekit.net/yvi0kcr.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script>
+    const SUPABASE_URL = 'https://kmbrcuqkkcwawkqvamqc.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImttYnJjdXFra2N3YXdrcXZhbXFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAzMzM4MjIsImV4cCI6MjA2NTkwOTgyMn0.CxMh_xjyBH4NkhncXWs45RUr3HTbyG5ImT3uvb64ikw';
+    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  </script>
 </head>
 <body>
   <main class="home-container">
@@ -55,9 +61,9 @@
           <p class="journal-slide-question">Did you spend money today?</p>
 
           <div class="journal-spend-options">
-            <button class="spend-option">Yes <span class="star">☆</span></button>
-            <button class="spend-option">No <span class="star">☆</span></button>
-            <button class="spend-option">Still thinking about it <span class="star">☆</span></button>
+            <button class="spend-option" onclick="selectSpendingOption(this)">Yes <span class="star">☆</span></button>
+            <button class="spend-option" onclick="selectSpendingOption(this)">No <span class="star">☆</span></button>
+            <button class="spend-option" onclick="selectSpendingOption(this)">Still thinking about it <span class="star">☆</span></button>
           </div>
 
           <button class="journal-next-button" onclick="nextSlide()">
@@ -67,28 +73,28 @@
       </section>
 
       <!-- Slide 3 -->
-      <form action="homepage.html" method="get" class="journal-slide-form">
-        <section class="journal-slide">
-          <div class="home-main-wrapper">
-            <p class="journal-slide-question journal-slide-question-3">
-              What did you plan on or end up buying?
-            </p>
-            <textarea class="journal-textarea" placeholder="Type here..."></textarea>
-          </div>
+      <section class="journal-slide">
+        <div class="home-main-wrapper">
+          <p class="journal-slide-question journal-slide-question-3">
+            What did you plan on or end up buying?
+          </p>
+          <textarea class="journal-textarea" placeholder="Type here..."></textarea>
+        </div>
 
-          <button type="submit" class="journal-next-button">
-            Submit <img src="assets/forward-arrow.png" alt="Arrow" class="journal-arrow" />
-          </button>
-        </section>
-      </form>
+        <!-- 🔁 Replace form with just a button -->
+        <button type="button" class="journal-next-button" onclick="submitJournalEntry()">
+          Submit <img src="assets/forward-arrow.png" alt="Arrow" class="journal-arrow" />
+        </button>
+      </section>
+
     </div>
   </main>
 
   <!-- Footer Nav -->
   <footer class="home-nav-footer">
     <a href="homepage.html" class="nav-button">
-        <img src="assets/home-icon.png" alt="Home" class="nav-icon">
-      </a>
+      <img src="assets/home-icon.png" alt="Home" class="nav-icon">
+    </a>
     <button class="nav-button">
       <img src="assets/chatbot-icon.png" alt="Chat-bot" class="nav-icon">
     </button>
@@ -100,7 +106,41 @@
     </button>
   </footer>
 
+  <!-- JavaScript -->
   <script src="js/script.js"></script>
+
+  <!-- ✅ Supabase Submit Logic -->
+  <script>
+    async function submitJournalEntry() {
+      const moodScore = document.querySelector('.journal-slider').value;
+      const spendingChoice = document.querySelector('.spend-option.selected')?.innerText.trim() || '';
+      const purchaseNotes = document.querySelector('.journal-textarea').value.trim();
+
+      const { data, error } = await supabase
+        .from('journal_entries')
+        .insert([
+          {
+            mood_score: parseInt(moodScore),
+            spending_choice: spendingChoice,
+            purchase_notes: purchaseNotes
+          }
+        ]);
+
+      if (error) {
+        console.error('Error inserting data:', error);
+        alert('Something went wrong!');
+      } else {
+        alert('Entry submitted!');
+        window.location.href = 'homepage.html';
+      }
+    }
+
+    function selectSpendingOption(button) {
+      document.querySelectorAll('.spend-option').forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
+    }
+  </script>
 </body>
 </html>
+
 
