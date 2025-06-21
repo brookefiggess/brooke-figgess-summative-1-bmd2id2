@@ -421,6 +421,13 @@ body {
   width: 20px;
 }
 
+.journal-slide .home-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 
 
 /* Journal Form - Carousel slide three */
