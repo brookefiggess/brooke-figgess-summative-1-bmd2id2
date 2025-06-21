@@ -44,7 +44,7 @@ let supabase;
 
 window.addEventListener('DOMContentLoaded', () => {
   const SUPABASE_URL = 'https://kmbrcuqkkcwawkqvamqc.supabase.co';
-  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'; // (trimmed for clarity)
+  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImttYnJjdXFra2N3YXdrcXZhbXFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAzMzM4MjIsImV4cCI6MjA2NTkwOTgyMn0.CxMh_xjyBH4NkhncXWs45RUr3HTbyG5ImT3uvb64ikw'; // (trimmed for clarity)
   supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 });
 
