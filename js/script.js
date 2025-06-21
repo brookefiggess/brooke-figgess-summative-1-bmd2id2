@@ -68,7 +68,7 @@ async function submitJournalEntry() {
     alert('Something went wrong!');
   } else {
     alert('Entry submitted!');
-    window.location.href = 'journalprompt.html'; // ✅ redirect to journal prompt page
+    window.location.href = 'journalprompt.html';
   }
 }
 
@@ -76,5 +76,30 @@ function selectSpendingOption(button) {
   document.querySelectorAll('.spend-option').forEach(btn => btn.classList.remove('selected'));
   button.classList.add('selected');
 }
+
+
+// CHange prompt button function - Journalprompt.html
+
+const prompts = [
+    "What did money feel like growing up?",
+    "When do you feel most in control of your finances?",
+    "What’s something you wish you understood earlier about money?",
+    "What emotions come up when you check your bank account?",
+    "How has your relationship with money changed recently?",
+    "What would financial freedom look like for you?"
+  ];
+  
+  function swapPrompt() {
+    const promptElement = document.getElementById("journal-prompt-text");
+    const currentPrompt = promptElement.innerText;
+    let newPrompt;
+  
+    // Ensure a different prompt from the current one
+    do {
+      newPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+    } while (newPrompt === currentPrompt);
+  
+    promptElement.innerText = newPrompt;
+  }
 
   
