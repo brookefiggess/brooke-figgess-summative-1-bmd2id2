@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UNCENT | Journal Form</title>
   <link rel="stylesheet" href="https://use.typekit.net/yvi0kcr.css" />
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- ✅ Supabase Library Loaded First, with 'defer' -->
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js" defer></script>
 
 </head>
 
 <body>
   <main class="home-container">
-    <!-- Header -->
+
     <div class="home-header">
       <img src="assets/back-arrow.png" alt="Back" class="home-back-icon" onclick="history.back()">
       <img src="assets/uncent-logo-stacked.png" alt="UNCENT Logo" class="home-logo">
@@ -25,7 +26,7 @@
       </div>
     </div>
 
-    <!-- Page Heading -->
+
     <div class="home-main-wrapper">
       <h1 class="page-header-journal">Journal</h1>
     </div>
@@ -62,7 +63,8 @@
           <div class="journal-spend-options">
             <button class="spend-option" onclick="selectSpendingOption(this)">Yes <span class="star">☆</span></button>
             <button class="spend-option" onclick="selectSpendingOption(this)">No <span class="star">☆</span></button>
-            <button class="spend-option" onclick="selectSpendingOption(this)">Still thinking about it <span class="star">☆</span></button>
+            <button class="spend-option" onclick="selectSpendingOption(this)">Still thinking about it <span
+                class="star">☆</span></button>
           </div>
 
           <button class="journal-next-button" onclick="nextSlide()">
@@ -81,14 +83,14 @@
         </div>
 
         <button type="button" class="journal-next-button" onclick="submitJournalEntry()">
-            Submit <img src="assets/forward-arrow.png" alt="Arrow" class="journal-arrow"/>
-          </button>
+          Submit <img src="assets/forward-arrow.png" alt="Arrow" class="journal-arrow" />
+        </button>
       </section>
 
     </div>
   </main>
 
-  <!-- Footer Nav -->
+
   <footer class="home-nav-footer">
     <a href="homepage.html" class="nav-button">
       <img src="assets/home-icon.png" alt="Home" class="nav-icon">
@@ -104,11 +106,8 @@
     </button>
   </footer>
 
-  <!-- Your existing general JS file -->
+
   <script src="js/script.js" defer></script>
 </body>
+
 </html>
-
-
-
-

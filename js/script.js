@@ -1,44 +1,44 @@
 function goToHome() {
-    window.location.href = "homepage.html";
-  }
+  window.location.href = "homepage.html";
+}
 
 // Form functions - journalform.html
 
-  function nextSlide() {
-    const slides = document.querySelectorAll('.journal-slide');
-    let activeIndex = Array.from(slides).findIndex(s => s.classList.contains('active'));
-    if (activeIndex < slides.length - 1) {
-      slides[activeIndex].classList.remove('active');
-      slides[activeIndex + 1].classList.add('active');
-    }
+function nextSlide() {
+  const slides = document.querySelectorAll('.journal-slide');
+  let activeIndex = Array.from(slides).findIndex(s => s.classList.contains('active'));
+  if (activeIndex < slides.length - 1) {
+    slides[activeIndex].classList.remove('active');
+    slides[activeIndex + 1].classList.add('active');
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".journal-slider");
+
+  function updateSliderBackground(value) {
+    slider.style.background = `linear-gradient(to right, #EEFF00 0%, #EEFF00 ${value}%, #444 ${value}%, #444 100%)`;
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".journal-slider");
-  
-    function updateSliderBackground(value) {
-      slider.style.background = `linear-gradient(to right, #EEFF00 0%, #EEFF00 ${value}%, #444 ${value}%, #444 100%)`;
-    }
-  
-    updateSliderBackground(slider.value);
-  
-    slider.addEventListener("input", function () {
-      updateSliderBackground(this.value);
-    });
-  });
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    const spendOptions = document.querySelectorAll(".spend-option");
-  
-    spendOptions.forEach(button => {
-      button.addEventListener("click", () => {
-        spendOptions.forEach(btn => btn.classList.remove("selected"));
-        button.classList.add("selected");
-      });
-    });
-  });
+  updateSliderBackground(slider.value);
 
- // Supabase defer - journalform.html
+  slider.addEventListener("input", function () {
+    updateSliderBackground(this.value);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const spendOptions = document.querySelectorAll(".spend-option");
+
+  spendOptions.forEach(button => {
+    button.addEventListener("click", () => {
+      spendOptions.forEach(btn => btn.classList.remove("selected"));
+      button.classList.add("selected");
+    });
+  });
+});
+
+// Supabase defer - journalform.html
 
 let supabase;
 
@@ -81,25 +81,24 @@ function selectSpendingOption(button) {
 // CHange prompt button function - Journalprompt.html
 
 const prompts = [
-    "What did money feel like growing up?",
-    "When do you feel most in control of your finances?",
-    "What’s something you wish you understood earlier about money?",
-    "What emotions come up when you check your bank account?",
-    "How has your relationship with money changed recently?",
-    "What would financial freedom look like for you?"
-  ];
-  
-  function swapPrompt() {
-    const promptElement = document.getElementById("journal-prompt-text");
-    const currentPrompt = promptElement.innerText;
-    let newPrompt;
-  
-    // Ensure a different prompt from the current one
-    do {
-      newPrompt = prompts[Math.floor(Math.random() * prompts.length)];
-    } while (newPrompt === currentPrompt);
-  
-    promptElement.innerText = newPrompt;
-  }
+  "What did money feel like growing up?",
+  "When do you feel most in control of your finances?",
+  "What’s something you wish you understood earlier about money?",
+  "What emotions come up when you check your bank account?",
+  "How has your relationship with money changed recently?",
+  "What would financial freedom look like for you?"
+];
 
-  
+function swapPrompt() {
+  const promptElement = document.getElementById("journal-prompt-text");
+  const currentPrompt = promptElement.innerText;
+  let newPrompt;
+
+  // refreshing prompts on button press
+  do {
+    newPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+  } while (newPrompt === currentPrompt);
+
+  promptElement.innerText = newPrompt;
+}
+

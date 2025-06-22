@@ -1,42 +1,42 @@
 /*LANDING PAGE*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
-    background-color: #EEFF00;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: #EEFF00;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.primary-logo{
-    width: 60%;
-    max-width: 300px;
-    margin-bottom: 2rem;
+.primary-logo {
+  width: 60%;
+  max-width: 300px;
+  margin-bottom: 2rem;
 }
 
-  .login-btn {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 25px;
-    background-color: #000000;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s ease;
-    font-size: 1rem;
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+.login-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .login-btn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 
@@ -97,7 +97,7 @@ body {
 /* Main Content Wrapper */
 .home-main-wrapper {
   padding: 0 2rem;
-  margin-bottom: 6rem; /* make room for fixed bottom nav */
+  margin-bottom: 6rem;
 }
 
 /* Date Section */
@@ -113,7 +113,7 @@ body {
   text-underline-offset: 10px;
 }
 
-.page-header{
+.page-header {
   font-size: 32px;
   font-weight: 600;
   padding-top: 40px;
@@ -219,14 +219,14 @@ body {
 }
 
 .nav-icon {
-  width: 32px;   
-  height: 32px;  
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
 /* Journal Home */
 
-.page-header-journal{
+.page-header-journal {
   font-size: 32px;
   font-weight: 600;
   padding-top: 40px;
@@ -447,7 +447,7 @@ body {
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-size: 1rem;
   resize: none;
-  outline: none; 
+  outline: none;
 }
 
 .journal-textarea {
@@ -463,7 +463,8 @@ body {
 
 .journal-textarea:focus {
   outline: none;
-  border-color: #E8FF00;;
+  border-color: #E8FF00;
+  ;
 }
 
 .journal-textarea::placeholder {
@@ -477,7 +478,7 @@ body {
 /* Journal prompt page */
 
 .journalprompt-page .home-main-wrapper {
-  padding: 0 2rem; /* ✅ Match homepage */
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -485,16 +486,16 @@ body {
 }
 
 .journalprompt-page .home-date-prompt {
-  font-size: 14px; /* Match homepage style */
+  font-size: 14px;
   margin-top: -10px;
   margin-bottom: 10px;
 }
 
 .journalprompt-page .home-text-card {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  text-align: center;       
+  text-align: center;
   flex-direction: column;
   border-radius: 10px;
   padding: 1.5rem;
@@ -503,7 +504,7 @@ body {
   color: white;
   font-family: "neue-haas-grotesk-display", sans-serif;
   background-color: transparent;
-  margin-bottom: 1rem; /* Adjust for better spacing */
+  margin-bottom: 1rem;
 }
 
 .journalprompt-page .prompt-swap-button {
@@ -517,28 +518,29 @@ body {
   border-radius: 20px;
   cursor: pointer;
   opacity: 0.5;
-  align-self: center; 
+  align-self: center;
 }
 
 .journalprompt-page .journal-textarea {
-    background-color: #1c1c1c;
-    border: none;
-    padding: 1.5rem;
-    color: white;
-    max-width: 500px;
-    margin: 0 auto 2rem auto;
-    height: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  background-color: #1c1c1c;
+  border: none;
+  padding: 1.5rem;
+  color: white;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .journalprompt-page .journal-textarea:focus {
   outline: none;
-  border-color: #E8FF00;;
+  border-color: #E8FF00;
+  ;
 }
 
-/* ✅ Styled Done Button */
+/* 'Done' Button */
 
 .journalprompt-page .journalprompt-done-button {
   background: none;
@@ -551,14 +553,14 @@ body {
   gap: 10px;
   cursor: pointer;
   font-family: "neue-haas-grotesk-display", sans-serif;
-  
+
 }
 
 .journalprompt-done-button img {
   width: 20px;
 }
 
-/* CHATBOT PAGE STYLES */
+/* Chatbot page */
 
 .chatbot-page .chatbot-wrapper {
   display: flex;
@@ -592,7 +594,7 @@ body {
 .chatbot-page .chatbot-welcome .highlight {
   font-weight: 600;
   color: #E8FF00;
-  font-size: inherit; /* match parent size */
+  font-size: inherit;
 }
 
 .chatbot-page .chatbot-message {
@@ -600,7 +602,6 @@ body {
   align-items: center;
   gap: 1rem;
   background-color: transparent;
-  /* Removed center alignment */
 }
 
 .chatbot-page .chatbot-icon {
