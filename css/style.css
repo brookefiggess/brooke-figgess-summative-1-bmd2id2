@@ -477,11 +477,11 @@ body {
 /* Journal prompt page */
 
 .journalprompt-page .home-main-wrapper {
-  padding: 0 20px;
+  padding: 0 2rem; /* ✅ Match homepage */
   display: flex;
   flex-direction: column;
-  gap: 24px; /* Add spacing between all elements */
-  margin-bottom: 80px; /* Space above footer */
+  gap: 24px;
+  margin-bottom: 80px;
 }
 
 .journalprompt-page .home-date-prompt {
@@ -507,6 +507,8 @@ body {
 }
 
 .journalprompt-page .prompt-swap-button {
+  margin-top: -1.7rem;
+  margin-bottom: 1rem;
   background-color: #2a2a2a;
   color: white;
   font-size: 14px;
@@ -519,16 +521,17 @@ body {
 }
 
 .journalprompt-page .journal-textarea {
-  margin-top: 20px;
-  border: 1.5px solid #444;
-  border-radius: 10px;
-  padding: 14px;
-  font-size: 16px;
-  background-color: #1c1c1c;
-  color: white;
-  resize: none;
-  margin-bottom: 1rem;
-}
+    background-color: #1c1c1c;
+    border: none;
+    padding: 1.5rem;
+    color: white;
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
 .journalprompt-page .journal-textarea:focus {
   outline: none;
@@ -555,3 +558,80 @@ body {
   width: 20px;
 }
 
+/* CHATBOT PAGE STYLES */
+
+.chatbot-page .chatbot-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 0 2rem;
+  margin-top: 20px;
+  margin-bottom: 120px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chatbot-page .chatbot-welcome {
+  font-size: 32px;
+  line-height: 1.5;
+  padding-top: 40px;
+  padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  text-align: center;
+}
+
+.chatbot-page .chatbot-welcome .regular {
+  font-weight: 400;
+  color: white;
+}
+
+.chatbot-page .chatbot-welcome .highlight {
+  font-weight: 600;
+  color: #E8FF00;
+  font-size: inherit; /* match parent size */
+}
+
+.chatbot-page .chatbot-message {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: transparent;
+  /* Removed center alignment */
+}
+
+.chatbot-page .chatbot-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.chatbot-page .chatbot-bubble {
+  background-color: #111;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  max-width: 280px;
+  color: white;
+  text-align: left;
+}
+
+.chatbot-page .chatbot-textarea {
+  border: none;
+  background-color: #1c1c1c;
+  color: white;
+  padding: 1.5rem;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: 1rem;
+  border-radius: 12px;
+  height: 140px;
+  resize: none;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.chatbot-page .chatbot-textarea::placeholder {
+  color: #aaa;
+}
