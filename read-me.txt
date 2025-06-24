@@ -1,3 +1,32 @@
+Project Overview:
+
+UNCENT is a web-based app designed to help young adults reflect on their emotional relationship with money, with a focus on impulse spending and Buy Now Pay Later (BNPL) habits. Through journaling and chatbot interaction, the app supports users in slowing down, acknowledging spending triggers, and making more mindful decisions.
+
+UNCENT encourages self-awareness over shame, offering a supportive space that prioritises emotional wellbeing over strict budgeting.
+
+
+Inspiration & Problem Statement:
+
+Many Gen Z users fall into cycles of impulse purchases and unregulated BNPL usage, often without tools to reflect on the emotional drivers behind their financial behaviour. UNCENT was created to fill this gap, not by offering traditional financial advice, but by focusing on *why* users spend and how they feel about it.
+
+The app is inspired by journaling practices and conversational UI, and aims to normalise financial reflection without judgement.
+
+Key features:
+
+Weekly Tracker Dashboard: Displays saved money from avoided BNPL purchases and impulse buys.
+
+Journal Form Carousel: A 3-slide interactive flow that:
+  - Captures emotional state via a slider.
+  - Lets users recognise their current spending state
+  - Lets users reflect on spending triggers.
+
+Followed by A:
+  - Reflective journaling prompt.
+
+Conversational Chatbot: 
+- Offers gentle encouragement and helps users explore emotional patterns behind purchases.
+
+
 User flow instructions:
 
 Flow one:
@@ -20,3 +49,4 @@ Please note:
 The database is incorperated within the questions you fill out on the journal page.
 
 The chatbot is an MVP of what it looks like visually therefore having no fuctionality.
+
