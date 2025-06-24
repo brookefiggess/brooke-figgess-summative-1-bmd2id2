@@ -1,0 +1,22 @@
+User flow instructions:
+
+Flow one:
+
+Press 'Login' on the landing page.
+Arriving on the home page press the journal icon in the bottom nav bar.
+Press on 'Done your entry today?'.
+Fill out the carousel questions and select 'next' after filling out each question.
+After filling in the text field press 'submit'.
+You will be asked a question in which you must respond to, tap the 'change prompt' button if you would like a different question.
+Press 'Done' after completion.
+
+Flow two;
+
+Press the chaticon in the bottom nav bar.
+You can return home via back arrow or home button.
+
+Please note:
+
+The database is incorperated within the questions you fill out on the journal page.
+
+The chatbot is an MVP of what it looks like visually therefore having no fuctionality.
